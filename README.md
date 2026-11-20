@@ -59,13 +59,15 @@ LUKA(2018년생, 초2)의 독서 기록 웹앱. 단일 HTML 파일 하나로 동
 
 ## 배포
 
-GitHub Pages: **https://yuuunjk.github.io/reading-calendar/** (저장소 `yuuunjk/reading-calendar`, `main` 브랜치 루트).
+GitHub Pages(활성화 후): **https://yuuunjk.github.io/reading-calendar/** — 저장소 `yuuunjk/reading-calendar`, `main` 브랜치 루트.
+
+- 설정 → Pages → Source: **Deploy from a branch** → Branch: **main**, 폴더 **/(root)** → Save. 1분 뒤 주소가 살아난다.
 
 - 공개 주소라 누구나 앱 화면을 열 수 있다. 다만 앱은 기록을 서버로 보내지 않으므로 **읽은 책 데이터는 각자 브라우저 안에만** 남는다.
 - 수정한 `index.html`을 올리면 1~2분 뒤 주소에 반영된다.
 
 ## 개발
 
-앱은 의존성 없는 단일 파일이라 브라우저에서 바로 열어 고치면 된다. 검증·시안 스크린샷 스크립트(`test_app.py` 60체크, `shots.py`)는 작업 폴더에만 두고 이 저장소에는 올리지 않는다.
+앱은 의존성 없는 단일 파일이라 브라우저에서 바로 열어 고치면 된다. 검증·시안 스크린샷 스크립트(`test_app.py` 61체크, `shots.py`)는 작업 폴더에만 두고 이 저장소에는 올리지 않는다.
 
 검증 범위: 탭·필터·연간↔월간 이동·하루 보기·추가/수정/삭제·검색·백업 내보내기/불러오기·새로고침 유지·추천 담기, 초2·3~4단계 도서 구성, 디자인 디테일(성취도 틴트·분할 게이지·쪽수 배지·표지 색), 390×844와 1280×800에서 콘솔 에러 0건·가로 스크롤 없음.
