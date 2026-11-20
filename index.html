@@ -671,8 +671,10 @@
 
     const kc = koList.length, ec = enList.length, kp = sumPages(koList), ep = sumPages(enList);
     $('#yBadge').innerHTML = '<span class="pre">총 </span><b>' + fmt(total) + '</b><span class="u">권</span><span class="sep">·</span><b class="sm">' + fmt(totalPages) + '</b><span class="u">쪽</span>';
-    const kyPct = (kc + ec) ? kc / (kc + ec) * 100 : 0;
-    $('#yGauge').innerHTML = '<i class="ko" style="width:' + kyPct.toFixed(2) + '%"></i><i class="en" style="width:' + (100 - kyPct).toFixed(2) + '%"></i>';
+    const kyTotal = kc + ec;
+    $('#yGauge').innerHTML = kyTotal
+      ? '<i class="ko" style="width:' + (kc / kyTotal * 100).toFixed(2) + '%"></i><i class="en" style="width:' + (ec / kyTotal * 100).toFixed(2) + '%"></i>'
+      : '';
     const statKo = '<span class="stat ko"><i class="dot"></i><span class="sl">한글</span><b>' + fmt(kc) + '</b><em>권</em><span class="sm">' + fmt(kp) + '쪽</span></span>';
     const statEn = '<span class="stat en"><i class="dot"></i><span class="sl">영어</span><b>' + fmt(ec) + '</b><em>권</em><span class="sm">' + fmt(ep) + '쪽</span></span>';
     if (!total){
@@ -757,8 +759,10 @@
 
     $('#mTitle').textContent = y + '년 ' + (m+1) + '월';
     $('#mBadge').innerHTML = '<b>' + fmt(list.length) + '</b><span class="u">권</span><span class="sep">·</span><b class="sm">' + fmt(sumPages(list)) + '</b><span class="u">쪽</span>';
-    const kmPct = (koList.length + enList.length) ? koList.length / (koList.length + enList.length) * 100 : 0;
-    $('#mGauge').innerHTML = '<i class="ko" style="width:' + kmPct.toFixed(2) + '%"></i><i class="en" style="width:' + (100 - kmPct).toFixed(2) + '%"></i>';
+    const kmTotal = koList.length + enList.length;
+    $('#mGauge').innerHTML = kmTotal
+      ? '<i class="ko" style="width:' + (koList.length / kmTotal * 100).toFixed(2) + '%"></i><i class="en" style="width:' + (enList.length / kmTotal * 100).toFixed(2) + '%"></i>'
+      : '';
 
     if (!list.length){
       $('#mBreak').innerHTML = '<span class="none">이 달에는 아직 기록이 없어요.</span>';
