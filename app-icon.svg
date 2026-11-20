@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="512" height="512" viewBox="0 0 512 512">
+  <defs>
+    <linearGradient id="bg" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0" stop-color="#fdfaf2"/><stop offset="1" stop-color="#f2e9d6"/>
+    </linearGradient>
+    <linearGradient id="nv" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0" stop-color="#2a3750"/><stop offset="1" stop-color="#141d2c"/>
+    </linearGradient>
+    <filter id="sh" x="-30%" y="-30%" width="160%" height="160%">
+      <feDropShadow dx="0" dy="10" stdDeviation="12" flood-color="#7c6a48" flood-opacity="0.22"/>
+    </filter>
+  </defs>
+
+  <rect width="512" height="512" rx="114" fill="url(#bg)"/>
+
+  <!-- 달력 몸체 -->
+  <g filter="url(#sh)">
+    <rect x="94" y="138" width="324" height="292" rx="54" fill="url(#nv)"/>
+  </g>
+
+  <!-- 고리 -->
+  <rect x="162" y="104" width="28" height="76" rx="14" fill="#e4d3ae"/>
+  <rect x="322" y="104" width="28" height="76" rx="14" fill="#e4d3ae"/>
+
+  <!-- 종이 -->
+  <rect x="118" y="178" width="276" height="228" rx="30" fill="#fbf7ec"/>
+
+  <!-- 펼친 책 -->
+  <g transform="translate(256,302) scale(1.08) translate(-256,-302)">
+  <path d="M252 268 L176 254 Q164 252 164 264 L164 332 Q164 342 174 344 L252 358 Z" fill="#2563eb"/>
+  <path d="M260 268 L336 254 Q348 252 348 264 L348 332 Q348 342 338 344 L260 358 Z" fill="#e11d48"/>
+  <path d="M256 264 L256 360" stroke="#fbf7ec" stroke-width="7" stroke-linecap="round"/>
+  </g>
+
+  <!-- 책갈피 리본 -->
+  <path d="M300 178 H334 V238 L317 222 L300 238 Z" fill="#f2b233"/>
+</svg>
